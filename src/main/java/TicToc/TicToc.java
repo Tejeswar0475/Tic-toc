@@ -10,7 +10,9 @@ public class TicToc {
 		
 		TicToc tictoc=new TicToc();
 		String userSelectedOption=tictoc.userChoice();
-		tictoc.createBoard();
+
+		char[] currentBoard=tictoc.createBoard();
+		tictoc.showBoard(currentBoard);
 		
 	}
 	
@@ -24,7 +26,7 @@ public class TicToc {
 		{
 			return userChoose;
 		}
-		System.out.println("Your have entered wrong choice");
+		
 		
 		return userChoose;
 	}
@@ -36,12 +38,15 @@ public class TicToc {
 		{
 			board[i]=' ';
 		}
+
 	return board;
 	}
 	
-	public void showBoard()
+	public void showBoard(char[] board)
 	{
-		
+		System.out.println(board[ 1 ]+" | "+board[ 2 ]+" | "+board[ 3 ] );
+		System.out.println(board[ 4 ]+" | "+board[ 5 ]+" | "+board[ 6 ] );
+		System.out.println(board[ 7 ]+" | "+board[ 8 ]+" | "+board[ 9 ] );			
 	}
 	
 	
